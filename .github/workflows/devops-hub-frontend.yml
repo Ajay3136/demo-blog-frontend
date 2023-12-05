@@ -26,9 +26,9 @@ jobs:
         CI=false
         npm run build
         
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        GITHUB_TOKEN: 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
-        BRANCH: gh-pages
-        FOLDER: build
+    - name: Deploy to S3
+      run: |
+        aws s3 sync build/ s3://devops-hub-frontend
+      env:
+        AWS_ACCESS_KEY_ID: AKIATKQT465SROPLOWW5
+        AWS_SECRET_ACCESS_KEY: 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
