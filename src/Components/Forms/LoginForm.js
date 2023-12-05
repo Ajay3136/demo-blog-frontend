@@ -17,7 +17,7 @@ const LoginForm = ({ onSubmit, isSubmitted }) => {
       validationSchema={Yup.object({
         userName: Yup.string()
           .min(3, t("validation:atLeast", { number: 3 }))
-          .max(25, t("validation:lessThan", { number: 25 }))
+          .max(50, t("validation:lessThan", { number: 50 }))
           .required(t("validation:required")),
         password: Yup.string()
           .min(5, t("validation:atLeast", { number: 5 }))
