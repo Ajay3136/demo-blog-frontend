@@ -23,10 +23,10 @@ const NewPostForm = ({ onSubmit, isSubmitted }) => {
       validationSchema={Yup.object({
         title: Yup.string()
           .min(3, t("validation:atLeast", { number: 3 }))
-          .max(30, t("validation:lessThan", { number: 30 }))
+          .max(250, t("validation:lessThan", { number: 250 }))
           .required(t("validation:required")),
         content: Yup.string()
-          .min(250, t("validation:atLeast", { number: 250 }))
+          .min(100, t("validation:atLeast", { number: 100 }))
           .max(5000, t("validation:lessThan", { number: 5000 }))
           .required(t("validation:required")),
       })}
