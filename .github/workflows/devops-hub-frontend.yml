@@ -30,5 +30,5 @@ jobs:
       run: |
         aws s3 sync build/ s3://devops-hub-frontend --region us-east-1 --acl public-read
       env:
-        AWS_ACCESS_KEY_ID: AKIATKQT465SROPLOWW5
-        AWS_SECRET_ACCESS_KEY: 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
+        AWS_ACCESS_KEY_ID: {{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: {{ secrets.AWS_SECRET_ACCESS_KEY }}
