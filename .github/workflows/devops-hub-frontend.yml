@@ -3,7 +3,7 @@ name: Deploy to AWS S3 Bucket
 on:
   push:
     branches:
-      - main
+      - snehashish
 
 jobs:
   build:
